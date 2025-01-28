@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-lists/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-grids/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-react-spreadsheet/styles/material.css";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+  --color-gradient-start: #424cf9; /* Example start color */
+  --color-gradient-end: #2548a0; /* Example end color */
+  --primary: #424cf9;
+}
+@keyframes slideInRightTabs {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+body {
+  /* font-family: "Manrope" !important; */
+   font-family: "Manrope", serif;
+}
+::-webkit-scrollbar {
+  display: none;
+  /* color: var(--color-gradient-end); */
+}
+.slideInRight {
+  animation: slideInRight 1s ease-out;
+}
+.editor {
+  counter-reset: line;
+  /* border: 1px solid #ced4da; */
+  background-color: #002132;
+  color: white;
+  min-height: 400px;
+  overflow: scroll;
+}
+
+.editor .editorLineNumber {
+  position: absolute;
+  left: 0px;
+  color: #cccccc;
+  text-align: right;
+  width: 40px;
+  font-weight: 100;
+}
+
+.editor #codeArea {
+  outline: none;
+  padding-left: 60px !important;
+}
+
+.editor pre {
+  padding-left: 60px !important;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #c5c8c6;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-family: "Manrope", serif;
+  /* font-family: Inconsolata, Monaco, Consolas, "Courier New", Courier, monospace; */
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.onboardingBg {
+  height: 100vh;
+  background: linear-gradient(#00000090, #00000030),
+    url("/images/nlngbg.png") center center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.e-control {
+}
+
+.e-sheet-panel {
+  height: 70vh;
+}
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-wrapper:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  top: -5px;
+  left: 105%;
+  z-index: 1;
+  transition: opacity 0.3s;
+}
